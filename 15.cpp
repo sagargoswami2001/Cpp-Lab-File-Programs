@@ -1,0 +1,48 @@
+/*WAP to show one class students having data member roll no, name & age.
+Inherits some features of teacher, when inherited public-ally.*/
+#include<iostream>
+#include<string>
+using namespace std;
+
+class teacher
+{
+public:
+    char sagar(char mohit)
+    {
+        cout << "\n\nEnter Teacher's Initials: ";
+        cin >> mohit;
+        cout << "Teacher's Initials: ";
+        cout << mohit;
+    }
+};
+
+class students: teacher
+{
+public:
+    string name;
+    int roll_no;
+    int age;
+
+    void displaydata(char mohit)
+    {
+        cout << "\nStudent Roll No.: "<< roll_no << "\nStudent Name: "<< name << "\nStudent Age: "<< age;
+        sagar(mohit);
+    }
+};
+
+int main()
+{
+    char mohit;
+
+    students one;
+    cout<< "Enter Student Roll No.: ";
+    cin>> one.roll_no;
+    cout<< "Enter Student Name: ";
+    cin>> one.name;
+    cout<< "Enter Student Age: ";
+    cin>> one.age;
+
+    one.displaydata(mohit);
+
+    return 0;
+}
